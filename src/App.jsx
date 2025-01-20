@@ -20,9 +20,9 @@ function App() {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setNewMedication(prev => ({
+    setNewMedication((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -33,12 +33,15 @@ function App() {
       return;
     }
 
-    setMedications(prev => [...prev, {
-      ...newMedication,
-      id: Date.now(),
-      taken: false,
-      nextDose: new Date().toISOString()
-    }]);
+    setMedications((prev) => [
+      ...prev,
+      {
+        ...newMedication,
+        id: Date.now(),
+        taken: false,
+        nextDose: new Date().toISOString(),
+      },
+    ]);
 
     setNewMedication({
       name: '',
@@ -49,16 +52,14 @@ function App() {
   };
 
   const toggleMedicationTaken = (id) => {
-    setMedications(prev =>
-      prev.map(med =>
-        med.id === id ? { ...med, taken: !med.taken } : med
-      )
+    setMedications((prev) =>
+      prev.map((med) => (med.id === id ? { ...med, taken: !med.taken } : med))
     );
   };
 
   const deleteMedication = (id) => {
     if (window.confirm('Are you sure you want to delete this medication?')) {
-      setMedications(prev => prev.filter(med => med.id !== id));
+      setMedications((prev) => prev.filter((med) => med.id !== id));
     }
   };
 
@@ -149,7 +150,7 @@ function App() {
           {medications.length === 0 ? (
             <p>No medications added yet.</p>
           ) : (
-            medications.map(medication => (
+            medications.map((medication) => (
               <div key={medication.id} className="medication-card">
                 <div className="medication-header">
                   <h3>{medication.name}</h3>
