@@ -1,20 +1,20 @@
 :root {
-  --nhs-blue: #005EB8;
-  --nhs-white: #FFFFFF;
+  --nhs-blue: #005eb8;
+  --nhs-white: #ffffff;
   --nhs-dark-blue: #003087;
-  --nhs-bright-blue: #0072CE;
-  --nhs-light-blue: #41B6E6;
-  --nhs-black: #231F20;
+  --nhs-bright-blue: #0072ce;
+  --nhs-light-blue: #41b6e6;
+  --nhs-black: #231f20;
   --nhs-dark-grey: #425563;
   --nhs-mid-grey: #768692;
-  --nhs-pale-grey: #E8EDEE;
+  --nhs-pale-grey: #e8edee;
   --nhs-green: #009639;
-  --nhs-red: #DA291C;
+  --nhs-red: #da291c;
 }
 
 body {
   margin: 0;
-  font-family: "Frutiger W01", Arial, sans-serif;
+  font-family: 'Frutiger W01', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--nhs-pale-grey);
@@ -57,6 +57,12 @@ body {
   background-color: var(--nhs-dark-grey);
 }
 
+.nhs-button:disabled {
+  background-color: var(--nhs-mid-grey);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
 .nhs-form-group {
   margin-bottom: 1.5rem;
 }
@@ -79,6 +85,11 @@ body {
   outline: none;
   border-color: var(--nhs-bright-blue);
   box-shadow: 0 0 0 4px rgba(0, 114, 206, 0.2);
+}
+
+.nhs-input:disabled {
+  background-color: var(--nhs-pale-grey);
+  cursor: not-allowed;
 }
 
 .medication-card {
@@ -104,10 +115,14 @@ body {
 .medication-actions {
   display: flex;
   gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 .error-message {
   color: var(--nhs-red);
   margin-top: 0.5rem;
   font-size: 0.9rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: rgba(218, 41, 28, 0.1);
 }
