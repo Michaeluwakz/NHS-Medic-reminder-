@@ -1,0 +1,96 @@
+.app-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.medication-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.medications-list {
+  margin-top: 2rem;
+}
+
+h2 {
+  color: var(--nhs-dark-blue);
+  margin-bottom: 1.5rem;
+}
+
+.medication-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.medication-card h3 {
+  color: var(--nhs-blue);
+  margin: 0;
+}
+
+.medication-card p {
+  margin: 0.5rem 0;
+  color: var(--nhs-dark-grey);
+}
+
+/* Appointment Booking Styles */
+.appointment-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  border: 1px solid var(--nhs-pale-grey);
+  border-radius: 8px;
+}
+
+.messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.message {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.message.user {
+  background-color: var(--nhs-pale-grey);
+  margin-left: auto;
+}
+
+.message.assistant {
+  background-color: var(--nhs-light-blue);
+  color: white;
+}
+
+.welcome-message {
+  text-align: center;
+  color: var(--nhs-dark-grey);
+  padding: 2rem;
+}
+
+.chat-input {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-top: 1px solid var(--nhs-pale-grey);
+}
+
+.chat-input .nhs-input {
+  flex-grow: 1;
+}

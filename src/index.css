@@ -1,0 +1,113 @@
+:root {
+  --nhs-blue: #005EB8;
+  --nhs-white: #FFFFFF;
+  --nhs-dark-blue: #003087;
+  --nhs-bright-blue: #0072CE;
+  --nhs-light-blue: #41B6E6;
+  --nhs-black: #231F20;
+  --nhs-dark-grey: #425563;
+  --nhs-mid-grey: #768692;
+  --nhs-pale-grey: #E8EDEE;
+  --nhs-green: #009639;
+  --nhs-red: #DA291C;
+}
+
+body {
+  margin: 0;
+  font-family: "Frutiger W01", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--nhs-pale-grey);
+  color: var(--nhs-black);
+}
+
+.nhs-header {
+  background-color: var(--nhs-blue);
+  padding: 1rem;
+  color: white;
+}
+
+.nhs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.nhs-button {
+  background-color: var(--nhs-green);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.nhs-button:hover {
+  background-color: #007f2f;
+}
+
+.nhs-button.secondary {
+  background-color: var(--nhs-mid-grey);
+}
+
+.nhs-button.secondary:hover {
+  background-color: var(--nhs-dark-grey);
+}
+
+.nhs-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.nhs-form-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.nhs-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--nhs-mid-grey);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.nhs-input:focus {
+  outline: none;
+  border-color: var(--nhs-bright-blue);
+  box-shadow: 0 0 0 4px rgba(0, 114, 206, 0.2);
+}
+
+.medication-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.medication-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.medication-time {
+  color: var(--nhs-dark-grey);
+  font-size: 0.9rem;
+}
+
+.medication-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.error-message {
+  color: var(--nhs-red);
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
